@@ -32,4 +32,8 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+
+  .text-bright-pink {
+    color: var(--bright-pink-crayola);
+  }
 }
