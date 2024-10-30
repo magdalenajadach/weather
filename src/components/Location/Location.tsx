@@ -1,5 +1,7 @@
 // import { locations } from './../../app/config/locations.js'
+"use client"
 import Image from "next/image"
+import { useState } from 'react';
 
 export default function Location() {
   // const listItems = locations.map(location =>
@@ -10,9 +12,24 @@ export default function Location() {
   //   </li>
   // );
   // return <ul>{listItems}</ul>;
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  const toggleDarkMode = () => {
+    document.documentElement.classList.toggle('dark');
+    setIsDarkMode(!isDarkMode);
+  };
   return (
     <div className="w-full items-center min-h-screen">
-      <h2 className="text-4xl text-bright-pink font-semibold p-4 mb-12">Sneak peak at best UK runnning locations</h2>
+      <h2 className="text-4xl text-bright-pink font-semibold p-4 md:mb-10">Sneak peak at best UK runnning locations</h2>
+      <button
+        onClick={toggleDarkMode}
+        className="p-2 bg-indigo-500 text-white rounded"
+      >
+        {isDarkMode ? 'Light Mode' : 'Dark Mode'}
+      </button>
+      <div className="bg-white dark:bg-gray-900 text-black dark:text-white">
+        <p>Toggle dark mode to see the changes.</p>
+      </div>
       <div className="md:grid grid-cols-3 grid-rows-3 gap-4">
         <div className="text-3xl md:border-olivine place-content-center items-center p-4">Grib Goch</div>
         <div className="col-span-2 row-span-2 md:border-olivine p-4">
