@@ -12,7 +12,7 @@
   --olivine: #9db17cff;
   --celadon: #9cde9fff;
   --tea-green: #d1f5beff;
-  --bright-pink-crayola: #fb6376ff;
+  --bright-pink-crayola: #A31D21;
   --thistle: #d4cbe5ff;
   --white: #ffffff;
 }
@@ -37,6 +37,10 @@ body {
 
   .text-bright-pink {
     color: var(--bright-pink-crayola);
+  }
+
+  .border-olivine {
+    border: 2px solid var(--olivine);
   }
 }
 
