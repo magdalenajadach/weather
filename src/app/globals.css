@@ -39,3 +39,10 @@ body {
     color: var(--bright-pink-crayola);
   }
 }
+
+@layer base {
+  html {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}

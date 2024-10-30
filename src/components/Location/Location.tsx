@@ -28,8 +28,8 @@ export default function Location() {
             />
           </div>
         </div>
-        <div className="row-span-2 col-start-2 row-start-3 border-solid border-2 border-indigo-600">Location: North Wales, Eryri National Park</div>
-        <div className="row-span-2 col-start-3 row-start-3 border-solid border-2 border-indigo-600">Weather: rainy, foggy, ugly</div>
+        <div className="row-span-2 col-start-2 row-start-3 border-solid border-2 border-indigo-600 place-content-center items-center p-8">Location: North Wales, Eryri National Park</div>
+        <div className="row-span-2 col-start-3 row-start-3 border-solid border-2 border-indigo-600 place-content-center items-center p-8">Weather: rainy, foggy, ugly</div>
       </div>
     </div>
   )
