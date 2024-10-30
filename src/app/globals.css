@@ -3,10 +3,12 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
+  /* --background: #ffffff; */
+  --background: var(--pale-mud);
   --foreground: #171717;
   --van-dyke: #4b3b40ff;
   --coyote: #82735cff;
+  --pale-mud: #CDCABB;
   --olivine: #9db17cff;
   --celadon: #9cde9fff;
   --tea-green: #d1f5beff;
