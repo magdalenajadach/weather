@@ -12,7 +12,7 @@ export default function Location() {
   // return <ul>{listItems}</ul>;
   return (
     <div className="">
-      <h2 className="text-4xl text-bright-pink font-semibold flex w-full items-center justify-center min-h-screen sm:p-20">Sneak peak at the best UK runnning locations</h2>
+      <h2 className="text-4xl text-bright-pink font-semibold flex w-full items-center justify-center sm:p-20">Sneak peak at the best UK runnning locations</h2>
       <div className="md:grid grid-cols-3 grid-rows-3 gap-4">
         <div className="bg-white text-3xl md:border-olivine place-content-center items-center p-4">Grib Goch</div>
         <div className="bg-white col-span-2 row-span-2 md:border-olivine p-4">

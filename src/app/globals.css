@@ -39,6 +39,10 @@ body {
     color: var(--bright-pink-crayola);
   }
 
+  .bg-coyote {
+    background-color: var(--coyote);
+  }
+
   .border-olivine {
     border: 2px solid var(--olivine);
   }
