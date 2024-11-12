@@ -7,10 +7,13 @@ export default function Search() {
   const [weatherData, setWeatherData] = useState(null);
 
   const [selectedLocation, setSelectedLocation] = useState("London")
+  const [selectedLabel, setSelectedLabel] = useState("")
 
   const handleLocationChange = (e) => {
     setSelectedLocation(e.target.value);
+    setSelectedLabel(e.target.getAttribute("data-label"));
   };
+
 
   useEffect(() => {
     const getWeatherData = async () => {
@@ -38,29 +41,28 @@ export default function Search() {
       <ul className="items-center w-full text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex dark:bg-gray-700 dark:border-gray-600 dark:text-white">
         <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
             <div className="flex items-center ps-3">
-                <input id="kinder-scout" type="radio"  onChange={handleLocationChange} value="London" name="list-radio" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" />
-                <label htmlFor="kinder-scout" className="w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Kinder Scout, Dark Peak of the Derbyshire, England </label>
+                <input id="kinder-scout" type="radio" data-label="Kinder Scout, Dark Peak of the Derbyshire, England" onChange={handleLocationChange} value="London" name="list-radio" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" />
+                <label  htmlFor="kinder-scout" className="w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Kinder Scout, Dark Peak of the Derbyshire, England </label>
             </div>
         </li>
         <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
             <div className="flex items-center ps-3">
-                <input id="tryfan" type="radio"  onChange={handleLocationChange} value="Manchester" name="list-radio" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" />
+                <input id="tryfan" type="radio" data-label="Tryfan, Ogwen Valley, Eryri, Wales" onChange={handleLocationChange} value="Manchester" name="list-radio" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" />
                 <label htmlFor="tryfan" className="w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Tryfan, Ogwen Valley, Eryri, Wales</label>
             </div>
         </li>
         <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
             <div className="flex items-center ps-3">
-                <input id="mam-tor" type="radio" onChange={handleLocationChange} value="Leeds" name="list-radio" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"/>
+                <input id="mam-tor" type="radio" data-label="Mam Tor, High Peak of Derbyshire, England" onChange={handleLocationChange} value="Leeds" name="list-radio" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"/>
                 <label htmlFor="mam-tor" className="w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Mam Tor, High Peak of Derbyshire, England</label>
             </div>
         </li>
       </ul>
       <div>
-        <h2>Location: {selectedLocation}</h2>
+        <h3>Selected location: {selectedLabel}</h3>
         {weatherData ? (
         <div>
-          <p>City: {weatherData.name}</p>
-          <p>Temperature: {weatherData.main.temp} °C</p>
+          <p>Temperature: {weatherData.main.temp.toFixed(0)} °C</p>
           <p>Weather: {weatherData.weather[0].description}</p>
         </div>
         ) : (
