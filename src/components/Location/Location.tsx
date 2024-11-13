@@ -1,15 +1,6 @@
-// import { locations } from './../../app/config/locations.js'
 import Image from "next/image"
 
 export default function Location() {
-  // const listItems = locations.map(location =>
-  //   <li key={location.id}>
-  //     <p>
-  //       <b>{location.title}</b>
-  //     </p>
-  //   </li>
-  // );
-  // return <ul>{listItems}</ul>;
   return (
     <div className="md:flex w-full items-center justify-center min-h-screen sm:p-20">
       <h2 className="text-4xl text-bright-pink font-semibold flex w-full items-center justify-center sm:p-20">Sneak peak at the best UK runnning locations</h2>
