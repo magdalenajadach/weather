@@ -6,7 +6,7 @@ import { fetchWeatherData } from "../../api/weatherApi";
 export default function Search() {
   const [weatherData, setWeatherData] = useState(null);
 
-  const [selectedLocation, setSelectedLocation] = useState("London")
+  const [selectedLocation, setSelectedLocation] = useState("")
   const [selectedLabel, setSelectedLabel] = useState("")
 
   const handleLocationChange = (e) => {
@@ -59,14 +59,12 @@ export default function Search() {
         </li>
       </ul>
       <div>
-        <h3>Selected location: {selectedLabel}</h3>
-        {weatherData ? (
+        {weatherData && (
         <div>
+          <h3>Selected location: {selectedLabel}</h3>
           <p>Temperature: {weatherData.main.temp.toFixed(0)} °C</p>
           <p>Weather: {weatherData.weather[0].description}</p>
         </div>
-        ) : (
-          <p>Loading weather data...</p>
         )}
         </div>
       {/* <div className="grid grid-cols-5 grid-rows-5 gap-4">
