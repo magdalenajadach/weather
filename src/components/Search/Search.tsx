@@ -9,11 +9,10 @@ export default function Search() {
   const [selectedLocation, setSelectedLocation] = useState("")
   const [selectedLabel, setSelectedLabel] = useState("")
 
-  const handleLocationChange = (e) => {
+  const handleLocationChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSelectedLocation(e.target.value);
-    setSelectedLabel(e.target.getAttribute("data-label"));
+    setSelectedLabel(e.target.getAttribute("data-label") || "");
   };
-
 
   useEffect(() => {
     const getWeatherData = async () => {
@@ -67,24 +66,6 @@ export default function Search() {
         </div>
         )}
         </div>
-      {/* <div className="grid grid-cols-5 grid-rows-5 gap-4">
-        <div className="col-span-2 row-span-2 bg-white rounded-lg">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </div>
-        <div className="col-start-3 bg-white rounded-lg">Kinder Scout</div>
-        <div className="col-start-1 row-start-3 bg-white rounded-lg">Location: FFFFFF</div>
-        <div className="col-start-2 row-start-3 bg-white rounded-lg">Weather: dddddd</div>
-        <div className="row-span-2 col-start-3 row-start-2 bg-white rounded-lg">
-        <div className="w-full h-full relative rounded-lg md:border-olivine relative">
-          <Image
-            src="/images/crib-goch.png"
-            alt="Background"
-            layout="fill"
-            objectFit="cover"
-          />
-          </div>
-        </div>
-      </div> */}
     </div>
   )
 }
