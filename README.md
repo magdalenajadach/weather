@@ -1,15 +1,17 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Weather for runners
+This Next.js app, built with React, is designed to showcase some of my favorite running spots, complete with live weather updates. By using the OpenWeather API, the app provides real-time weather data for each location. The reason behind the app is to encourage everyone to get outside and stay active, no matter what the weather looks like.
 
-## Getting Started
+Whether it's sunny or stormy, these running spots are worth exploring, and this app provides the information you need to prepare. Check out current temperatures, conditions, and more for top running destinations, and get inspired to embrace the elements and keep moving.
 
-First, run the development server:
+## Tech details
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+This project was bootstrapped with Next.js, using create-next-app.
+
+### Getting Started
+
+To run the development server:
 ```
+yarn dev
+```
+
+Then open http://localhost:3666 in your browser to view the app.
