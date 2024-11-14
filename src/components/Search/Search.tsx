@@ -92,11 +92,13 @@ export default function Search() {
       </ul>
       <div>
         {weatherData && (
-          <div>
-            <h3>Selected location: {selectedLabel}</h3>
-            <p>Temperature: {weatherData.main.temp.toFixed(0)} °C</p>
-            <p>Weather: {weatherData.weather[0].description}</p>
-          </div>
+          <div className="md:flex w-full items-center justify-center p-4 place-content-center">
+          <div className="md:grid grid-cols-2 grid-rows-2 gap-2">
+            <div className="col-span-2 bg-white rounded-lg md:border-olivine items-center my-1.5 p-4 text-van-dyke"><h3><strong>Selected location:</strong> {selectedLabel}</h3></div>
+            <div className="row-start-2 bg-white rounded-lg md:border-olivine items-center my-1.5 p-4 text-van-dyke"><p><strong>Temperature:</strong> {weatherData.main.temp.toFixed(0)} °C</p></div>
+            <div className="row-start-2 bg-white rounded-lg md:border-olivine items-center my-1.5 p-4 text-van-dyke"><p><strong>Weather:</strong> {weatherData.weather[0].description}</p></div>
+        </div>
+        </div>
         )}
       </div>
     </div>
