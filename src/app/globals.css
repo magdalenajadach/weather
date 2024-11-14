@@ -39,6 +39,10 @@ body {
     color: var(--bright-pink-crayola);
   }
 
+  .text-van-dyke {
+    color: var(--van-dyke);
+  }
+
   .bg-coyote {
     background-color: var(--coyote);
   }

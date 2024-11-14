@@ -16,7 +16,7 @@ export default function Header() {
         <h1 className="text-white text-4xl sm:text-6xl font-bold p-4">
           Perfect weather for running
         </h1>
-        <p className='text-white gap-6 text-2xl sm:text-4xl font-bold p-4'>Check the weather conditions for any location and run</p>
+        <p className='text-white gap-6 text-2xl sm:text-4xl font-bold p-4'>Check the weather conditions for the location and run</p>
       </div>
     </header>
   );
