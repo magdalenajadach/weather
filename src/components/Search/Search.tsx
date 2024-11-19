@@ -39,7 +39,7 @@ export default function Search() {
 
   return (
     <div className="md:flex flex-col w-full items-center justify-center sm:p-10">
-      <h3 className="text-4xl text-van-dyke font-semibold flex w-full sm:p-10 items-center justify-center p-4">Choose your location</h3>
+      <h2 className="text-4xl text-van-dyke font-semibold flex w-full sm:p-10 items-center justify-center p-4">Choose your location</h2>
       <ul className="items-center w-full text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex dark:bg-gray-700 dark:border-gray-600 dark:text-white">
         <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
           <div className="flex items-center ps-3">
